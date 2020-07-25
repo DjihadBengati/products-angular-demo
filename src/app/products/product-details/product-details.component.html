@@ -1,0 +1,47 @@
+<div class="panel panel-default" *ngIf="product != null">
+    <div class="panel-heading">
+        <h4><b>{{ product.name }} - {{product.brand}}</b></h4>
+    </div>
+    <div class="panel-body">
+        <div class="col-md-4">
+            <img [src]="product.image" class="image">
+        </div>
+        <div class="col-md-8">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Characteristic</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Name</td>
+                        <td>{{ product.name }}</td>
+                    </tr>
+                    <tr>
+                        <td>Color</td>
+                        <td>{{ product.color }}</td>
+                    </tr>
+                    <tr>
+                        <td>Dimensions</td>
+                        <td>{{ product.dimensions }}</td>
+                    </tr>
+                    <tr>
+                        <td>System</td>
+                        <td>{{ product.system }}</td>
+                    </tr>
+                    <tr>
+                        <td>Storage</td>
+                        <td>{{ product.storage }}</td>
+                    </tr>
+                    <tr>
+                        <td>Camera</td>
+                        <td>{{ product.camera }}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="alert alert-info" role="alert" *ngIf="product === null">Please select a product.</div>

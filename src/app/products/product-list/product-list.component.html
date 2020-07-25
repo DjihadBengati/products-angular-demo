@@ -1,0 +1,20 @@
+<div class="row" *ngIf="products.length > 0">
+    <div class="card col-sm-6 col-md-4" *ngFor="let item of products">
+        <div class="thumbnail" [ngClass]="{'card-hover': product != null && item.name === product.name}">
+            <img class="image" [src]="item.image">
+            <div class="caption">
+                <h3>{{ item.name }}</h3>
+                <p>Storage: {{ item.storage }}</p>
+                <p>Price: {{ item.price }}</p>
+                <p>
+                    <a (click)="onSelect(item)" class="btn btn-primary" role="button">
+                        Detail
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row" *ngIf="products.length == 0" >
+    <div class="alert alert-info" role="alert" >No product found.</div>
+</div>

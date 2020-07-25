@@ -1,0 +1,9 @@
+.logo {
+    max-height: 40px;
+    max-width: 40px;
+}
+
+.brand {
+    font-weight: bold;
+    cursor: pointer;
+}

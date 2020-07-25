@@ -1,0 +1,8 @@
+<div class="btn-group btn-group-justified" role="group">
+    <div class="btn-group" role="group" *ngFor="let item of categories">
+        <button type="button" class="btn btn-default active"
+            [ngClass]="{'btn-primary active': category !== null && category.code === item.code}" (click)="onSelect(item)">
+            <b>{{ item.name }}</b>
+        </button>
+    </div>
+</div>

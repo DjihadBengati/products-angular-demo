@@ -1,0 +1,11 @@
+<ul class="list-group">
+    <li class="list-group-item brand" 
+        *ngFor="let item of brands"
+        (click)="onSelect(item)"
+        [ngClass]="{'active': brand != null && item.name === brand.name}">
+        <img class="logo"
+            [src]="item.logo"
+            alt="{{item.name}}">
+            {{item.name}}
+    </li>
+</ul>

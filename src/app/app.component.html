@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <app-brands (selectedBrand)="onSelectBrand($event)"></app-brands>
+        </div>
+        <div class="col-md-8">
+            <app-categories (selectedCategory)="onSelectCategory($event)"></app-categories>
+            <app-product-list
+            [brand] = "selectedBrand"
+            [category]="selectedCategory"
+            (selectedProduct)="onSelectProduct($event)"></app-product-list>
+        </div>    
+    </div>
+    <div class="row">
+        <app-product-details
+        [product]="selectedProduct"></app-product-details>
+    </div>
+</div>
